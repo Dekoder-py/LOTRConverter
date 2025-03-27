@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State var showExchangeInfo = false
+    @State var leftAmount = ""
+    @State var rightAmount = ""
     
     var body: some View {
         ZStack {
@@ -45,16 +47,18 @@ struct ContentView: View {
                                 .font(.headline)
                                 .foregroundStyle(.white)
                         }
+                        .padding(.bottom, -5)
                         
                         // input field
-                        Text("Placholder")
+                        TextField("Amount", text: $leftAmount)
+                            .textFieldStyle(.roundedBorder)
                     }
                     
                     // equals sign
                     Image(systemName: "equal")
                         .font(.largeTitle)
                         .foregroundStyle(.white)
-                        .symbolEffect(.pulse)
+                        .symbolEffect(.bounce.up.byLayer, options: .repeat(.periodic(delay: 1.0)))
                     
                     // right section
                     VStack {
@@ -71,13 +75,17 @@ struct ContentView: View {
                                 .scaledToFit()
                                 .frame(height: 33)
                         }
+                        .padding(.bottom, -5)
                         
                         // input field
-                        Text("Placeholder")
-                    
+                        TextField("Amount", text: $rightAmount)
+                            .textFieldStyle(.roundedBorder)
+                            .multilineTextAlignment(.trailing)
                     }
-                    
                 }
+                .padding()
+                .background(.black.opacity(0.5))
+                .clipShape(.capsule)
                 
                 Spacer()
                 
@@ -98,7 +106,7 @@ struct ContentView: View {
                 
     
             }
-            .border(.blue)
+//            .border(.blue)
         }
     }
 }
