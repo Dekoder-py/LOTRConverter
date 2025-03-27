@@ -58,7 +58,7 @@ struct ContentView: View {
                     Image(systemName: "equal")
                         .font(.largeTitle)
                         .foregroundStyle(.white)
-                        .symbolEffect(.bounce.up.byLayer, options: .repeat(.periodic(delay: 1.0)))
+                        .symbolEffect(.bounce.up.byLayer, options: .repeat(.periodic(delay: 5.0)))
                     
                     // right section
                     VStack {
