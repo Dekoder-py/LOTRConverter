@@ -2,7 +2,7 @@
 //  LOTRConverterApp.swift
 //  LOTRConverter
 //
-//  Created by Kyle B on 3/26/25.
+//  Created by Dekoder-py on 3/26/25.
 //
 
 import SwiftUI
