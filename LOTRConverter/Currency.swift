@@ -5,7 +5,6 @@
 //  Created by Dekoder-py on 3/31/25.
 //
 
-// FIXME: NEED TO REWATCH LESSON 12, MISSED NAMES IN THIS FILE.
 
 import SwiftUI
 
