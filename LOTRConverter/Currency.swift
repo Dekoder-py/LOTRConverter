@@ -5,27 +5,48 @@
 //  Created by Dekoder-py on 3/31/25.
 //
 
+// FIXME: NEED TO REWATCH LESSON 12, MISSED NAMES IN THIS FILE.
+
 import SwiftUI
 
-enum Currency: Double {
+enum Currency: Double, CaseIterable, Identifiable {
+    
     case copperPenny = 6400
     case silverPenny = 64
     case silverPiece = 16
     case goldPenny = 4
     case goldPiece = 1
     
+    var id: Currency { self }
+    
     var image: ImageResource {
         switch self {
         case .copperPenny:
-            .copperpenny
+                .copperpenny
         case .silverPenny:
-            .silverpenny
+                .silverpenny
         case .silverPiece:
-            .silverpiece
+                .silverpiece
         case .goldPenny:
-            .goldpenny
+                .goldpenny
         case .goldPiece:
-            .goldpiece
+                .goldpiece
+        }
+    }
+    
+        var name: String {
+            switch self {
+            case .copperPenny:
+                "Copper Penny"
+            case .silverPenny:
+                "Silver Penny"
+            case .silverPiece:
+                "Silver Piece"
+            case .goldPenny:
+                "Gold Penny"
+            case .goldPiece:
+                "Gold Piece"
         }
     }
 }
+
